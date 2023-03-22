@@ -1,0 +1,67 @@
+
+[1] "abstract" keyword:
+-----------------------
+-> "abstract" keyword is used for classes and methods only.
+-> "abstract" means declaration only but, no definition.
+    
+-> "abstract" method:
+   ------------------
+   * Method with signature only.
+   * It can be declared within an "abstract" class only.
+   * 1. The class inheriting an "abstract" class must override and define it's abstract methods(s). 
+     2. If the child class inheriting an "abstract" parent class does not define it's "abstract" method(s), the child
+       class must be declared as an "abstract" class.  
+   * An "abstract" method cannot be declared as "static"(/"abstract" and "static" keyword cannot be used together.)
+     Reason: "static" methods cannot be overridden.
+   * An "abstract" method cannot be declared as "final"(/"abstract" and "final" keyword cannot be used together.)
+     Reason: "final" methods cannot be overridden.
+
+-> "abstract" class:
+   -----------------
+   * An "abstract" class can contain both "abstract" and non-"abstract" methods.
+   * The reference of an "abstract" class can be created.
+   * An "abstract" class cannot be instantiated (i.e. it's object cannot be created) but, it's constructor can be declared.
+   * It's constructor cannot be declared as "abstract".
+ 
+-> What is a fully "abstract" class?
+   Answer: An "abstract" class with all of it's methods are "abstract" and all of it's fields are declared as
+           "public", "static" and "final" i.e constant.  
+
+[2] "final" keyword:
+--------------------
+-> "final" is a modifier.
+-> "final" means non changable.
+-> It can be used for, 
+                      1. class
+                      2. method and
+                      3. field:(i)   "static" variable
+                               (ii)  non-"static" variable
+                               (iii) local variable
+-> A "final" class cannot be inherited. 
+   It has all of its method(s) as "final" by default but, not necessarily the field(s).
+-> A "final" method is inherited but, cannot be overridden.
+-> A "final" field is bound to be initialized. 
+-> Some pre-defined final classes in java are "String", "StringBuffer", "Math", "Array" and all wrapper classes.
+
+[3] "interface" (keyword):
+--------------------------
+-> An "interface" is similar to a fully "abstract" class.
+-> All the fields of an "interface" are constant i.e. "public", "static" and "final" and 
+   all methods are "public" and "abstract" by default.
+-> It cannot have constructor(s).
+-> It's reference can be created but, it cannot be instantiated.
+   It's reference can hold it's child class objects.
+-> An "interface" can extend any number of "interface"(s) (using "extends" keyword).
+-> A class can implement any number of "interface"(s) (using "implements" keyword).
+-> A class implementing an interface is bound to override and define all of it's "abstract" methods
+   (as all methods of an "interface" are "abstract" by default).         
+-> From Java 8 and above an "interface" can have "default" and "static" method(s).
+   "default" methods and "static" methods are also "public" by default.
+   (All methods of an "interface" are "public" by default.)
+-> The "default" method allows to define method with implementation in an "interface".
+   "default" keyword is used to define "default" method.
+
+-----
+Note:
+-----
+-> The object of "abstract" class and "interface" can be created using annonymous inner class.

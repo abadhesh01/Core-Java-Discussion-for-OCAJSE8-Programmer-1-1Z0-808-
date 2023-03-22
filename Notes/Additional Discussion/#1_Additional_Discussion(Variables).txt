@@ -1,0 +1,36 @@
+Additional Discussion:                                                 
+                                                 -----------------
+                                                 Variables in Java
+                                                 -----------------
+ There are 3 types of variables in Java:
+ (1) Local variable
+       * Scope/Where it is defined? 
+         Ans: "Within a method and/or within a block("static" block, non-"static" block)."  
+       * Can it be accessed ouside the scope where it is defined? Ans: "No"
+       * Can it be declared as "static"? Ans: "No"
+       * Can we provide access specifier/visibility modifier for it? Ans: "No" 
+       * Can it be declares as "final"? Ans: "Yes"
+ (2) Instance variable (Non-local variable)
+       * Scope/Where it is defined?
+         Ans: "Within the class and outside the method/block."
+       * Can it be declared as "static"?: Ans: "Yes"
+       * Can we provide access specifier/visibility modifier for it? Ans: "Yes"
+       * Can it be declares as "final"? Ans: "Yes"
+ (3) "static" variable (Non-local variable)
+       * Scope/Where it is defined?
+         Ans: "Within the class and outside the method/block."
+       * Can we provide access specifier/visibility modifier for it? Ans: "Yes"
+       * Can it be declares as "final"? Ans: "Yes" 
+
+ Conclusion:
+ -----------
+ -> A local variable is declared within a method or block("static" block, non-"static" block).
+ -> A local variable has it's life within the block and cannot be accessed/visible outside the block where 
+    it's defined.
+ -> Both instance and "static" variables are defined within a class and outside the methods/blocks. 
+ -> We can use access specifiers for non-local variables ("static" variables and instance variables) only.
+ -> Any instance variable can be modified as "static" variable.
+ -> We can declare any variable as "final".  
+
+
+ 

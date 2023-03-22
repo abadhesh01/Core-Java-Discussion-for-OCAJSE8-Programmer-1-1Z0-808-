@@ -1,0 +1,38 @@
+
+[1] Access Specifiers:
+----------------------
+-> Definition: "Access specifiers determine the visibility/accessibility limit for data member(s) and function(s) of a class."
+-> Also called as "access modifiers" or "visibility modifiers".
+-> There are 4 access specifiers in Java.
+   
+   Following are the access specifiers in the order of their visibility limit:
+
+   Sl.No.          Access Specifier Name          Visibility / Accessibility Limit
+   ------          ---------------------          --------------------------------
+     1             private                        Within the class (Lowest Visibility).          
+     2             default / no-access            Within the package.
+     3             protected                      Within the package and outside the package through inheritance.
+     4             public                         Accessed anywhere (Highest Visibility).
+
+ 
+[2] PIC Rule:
+-------------
+  P-> 'package' declareation first. There can be only one 'package' declaration in a single .java file.
+  I-> 'import' declaration(s). There can be multiple 'import' statements in a single .java file.
+  C-> 'class' declaration(s). There can be multiple 'class' declarations in a single .java file but, only one class can be declared 
+       as 'public' and it's name should be the same as the .java file name.
+
+[3] What is blocks in Java?
+---------------------------
+-> Definition: "A block is simply two curly braces (one open and anathor close) without any declaration and may conatain some code(s)/statement(s)."
+-> There are 2 types of blocks in java. They are -
+   1. "static" block (Block declared as "static"). [Note: "static" blocks, variables and methods are loaded during class loading.]
+   2. non-"static" block.
+
+[4] Order of execution:
+-----------------------
+ 1. "static" blocks in the order they are present.
+ 2. main() method.
+ 3. If constructor is called with 'new' keyword in main method then,
+                   1. non-"static" blocks in the order they are present.
+                   2. constructor.

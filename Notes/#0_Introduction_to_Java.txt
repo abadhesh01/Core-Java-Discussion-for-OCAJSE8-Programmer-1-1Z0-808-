@@ -1,0 +1,31 @@
+
+(1) What is JAVA?:
+------------------
+ Java is a high level object oriented programming (OOP) language.
+
+(2) Some features of JAVA:
+--------------------------
+ 1. Simple and easy to learn.(Due to syntactical similarities with C/C++.)
+ 2. Robust (Strongly typed language. Exception Handeling.) 
+ 3. Object Oriented Programming (OOPs) Language.
+ 4. Plaform Independent (Write Once Run Anywhere)
+ 5. Architecture Neutral. (Size of any type of data is always same in any OS architecture.)
+ 6. Portable (As byte code is portable.)
+ 7. Secure (As pointer pointes to memory address, it does not have any pointer support like C/C++.)
+ 8. Multithreaded (Multithreading -> Multiple threads/processess/tasks running at same time.)
+
+(3) What is OOP?/Features of OOP:
+---------------------------------
+ 1. Abstraction (Hiding the Implementation.)
+ 2. Encapsulation [Binding the data(/variables/state/properties) and behaviour(/methods/functions) in a single unit.]
+ 3. Inheritance (Inheriting the properties and behaviours from parent class to child class. 
+                 Facilitates "Code Reusability".)
+ 4. Polymorphism ["One action in many ways." 
+                  Methods/Functions having same name and same functions but, 
+                  different implementations(logic) and/or different parameters.]
+ 5. Exception Handling [Execption -> An abnormal condition that disrupts the program in execution.
+    Broad definition of "Exception": "An abnormal condition that occurs during a program execution 
+    and disrupts the normal flow of instructions."]
+ 
+
+

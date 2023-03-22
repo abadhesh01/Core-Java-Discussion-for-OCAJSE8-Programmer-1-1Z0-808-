@@ -1,0 +1,71 @@
+                                                        -------------
+                                                        CLASS CONCEPT
+                                                        -------------
+ [1] Class:
+ ----------
+ -> Broad Definition: "A class is simply a template that defines the attributes(/data members/properties) and behaviours(/methods/ member functions) 
+                       of an object."
+ -> Narrow Definition: "A class is a blueprint/structure of an object."
+ -> It is a user defined datatype.
+ 
+ [2] Object:
+ -----------
+ -> Broad Definition: "When the constructor of a class is called through 'new' keyword, an object is instantiated/created."  
+ -> Narrow Definition: "An object is an instance of a class."
+
+ [3] What is "static"?
+ ---------------------
+ -> "static" means "one copy per class."
+ -> It is a modifier.
+ -> It cannot be used for local variables.
+ -> It can be used for member variable(s) and method(s) of a class and unnamed blocks. 
+ -> All the static members["static" variable(s) and "static" method(s)] of a class are shared through all of its' objects. 
+    Any change in "static" variable of a class will reflect in all of it's objects. 
+ -> "static" members can be accessed either through class name or through object(s). So object creation is not mandatory. 
+
+ [4] Variables in Java:
+ ----------------------
+ -> There are 3 types of variables in Java. They are -
+    1. Local variable 
+          * Scope: Defined within a block(method, "static" block, non-"static" block, loop block, conditional statement block).
+          * Must be initialized. 
+    2. Instance variable
+          * Object level variable.
+          * For each object different copy of instance variable is created.
+          * If not initialized, default value is assigned.
+    3. "static" variable
+          * Class level variable.
+          * Each object of same class share same "static" variable.
+          * If not initialized, default value is assigned.
+          * Can be accessed either through class name or through object(s). So object creation is not mandatory.
+ [5] Methods in Java:
+ --------------------
+ -> There are 2 types of methods in Java. They are -
+    1. "static" method
+       * Calling does not require any object.
+       * Can be called either through class name or through object(s). So object creation is not mandatory. 
+    2. non-"static" method
+       * Can only be called through object(s). 
+
+ [6] "this" keyword:
+ -------------------
+ -> It is a non-"static" reference that refers to the current object.
+ -> It cannot be used inside a "static" block or "static" method.
+ -> It has the following 2 usages. They are -
+    1. It can be used to refer to instance variable in case the arguement name and the instance variable name is same
+       inside a method or a constructor. 
+    2. It can be used to call one constructor inside anathor constructor of same class but, the rule is it should be the 
+       first statement inside the constructor.
+ 
+ [7] Method Overloading:
+ -----------------------
+ -> Definition: "Multiple methods having same name but different arguements is called as method overloading."
+ -> It is also called, 
+                   1. Static polymorphism or
+                   2. Static binding.
+ -> The method parameters may vary either by,
+                   1. Number of arguements or by
+                   2. Datatype of arguements or by
+                   3. Sequence/Order of arguements.       
+ -> Return type of method and modifiers have no significance in method overloading.      
+         

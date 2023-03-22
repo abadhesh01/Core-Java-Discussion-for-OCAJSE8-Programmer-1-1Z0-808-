@@ -1,0 +1,85 @@
+                                                    
+                                                                      -----------                                                                    
+                                                                      Inheritance
+                                                                      -----------
+
+[1] Inheritance:
+----------------
+-> Definition: "One class can inherit the attributes(/data members/instance variables) and behaviours(/member functions/methods) of anathor 
+                class. The class whose properties are inherited is called as parent class(/base class/super class) and the class who inherits the 
+                properties of parent class is called as child class(/derived class/sub class)."
+-> Inheritance facilitates code reusability.
+-> Java supports multilevel inheritance (i.e. one class can inherit only one class).
+-> "extends" keyword is used to inherit a class.
+-> Child class cannot access "private" member(s) of parent class.
+
+
+[2] Constructor calling in case of inheritance:
+-----------------------------------------------
+-> Whenever the child class object is created with it's default or parameterized constructor, the parent class default constructor is invoked 
+   implicitely. This is called constructor chaining.
+-> If the parent class paremeterized constructor is defined but, parent class default constructor is not defined, it results in a compile time
+   error. It can be resolved by either of the following 2 ways:
+          1. Define the default constructor manually inside the parent class.
+          2. Call the parent class parameterized constructor inside child class constructor using "super" keyword. 
+-> Constructor(s) cannot be inherited. 
+
+
+[3] "super" keyword:
+--------------------
+-> It is a non-static reference.  
+-> It cannot be used inside "static" block or "static" method. 
+-> It has the following 2 usages. They are -
+   1. It is used to refer to parent class instance variables inside child class blocks, methods and constructors in case
+      the parent class instance variables and child class instance variables have the same name.
+   2. It is used to call parent class constructor inside the child class constructor. 
+      The condition is "super" should be the first statement inside the child class constructor.
+-> Note: (A) Both "this" and "super" keyword are non-"static" reference i.e. they cannot be used inside "static" context.    
+         (B) There are following 2 differences between "this" and "super" keyword:
+             1. "this" refers to current object inside a class where as "super" is just a keyword.
+             2. "this" keyword is used to refer to current class members(variables & methods) where as "super" keyword
+                 is used to refers to parent class members.
+
+
+[4] Method Overriding and Dynamic Method Dispatch:
+--------------------------------------------------
+-> "Method Overriding": "Redefining the method in child class which is already present in parent class with same name, 
+                         same arguement types, same number of arguements and in the same order of arguements."
+   * It is also called as,
+                        1. Dynamic Polymorphism or
+                        2. Dynamic Binding or
+                        3. Runtime Polymorphism.
+   
+   * Without inheritance it is not possible.
+   
+   * Return type matters in case of method overriding.
+     1. If the return type in parent class method is of any primitive type, it should be the same primitive type in the child class method.
+     2. If the return type in parent class method is void, it should be void in the child class method.
+     3. If the return type in parent class method is any object, it should be either the same object or any of it's child object in the 
+        child class method.
+   
+   * The access specifier of overridden method in the child class can either be the same or with higher visibility/accessibilty 
+     limit as compared to parent class method.
+     [Example: If the overidden method in parent class has default/no-access specifier then in child class it can have either default access
+      or 'protected' access or 'public' access but not 'private' access because, 'private' access has lesser visibility as compared to default 
+      access where 'protected' and 'pulic' access have more visibility as compared to 'default' access.] 
+
+   * "private", "static" and "final" methods cannot be overridden.    
+
+-> "Dynamic Method Dispatch": "In case of method overriding, the process through which Java runtime system determines whether to call the
+                               parent class method implementation or child class method implementation."
+   * It depends on the object(parent or child) created and independent on reference(parent or child) variable. 
+
+-> Note:
+   1. Whenever a programmer deals with the aspects that are performed at compile time, the type of reference variable matters.
+      Example: (i)  Initialization of instance variable(s).
+               (ii) Method Overloading
+   2. Whenever a programmer deals with the aspects that are performed at run time, the type of objects matters.
+      Example: (i)  Method Overriding
+
+[5] Casting of Object Reference:
+--------------------------------
+-> Parent class reference can hold parent class object as well as child class object.
+-> Child class reference can hold child class object only.
+-> Only the parent class reference holding a child class object can be casted into a child class reference.
+-> Casting of parent class object into child type will result in "java.lang.ClassCastException". 
